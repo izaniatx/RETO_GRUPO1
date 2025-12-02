@@ -1,7 +1,16 @@
+import React from "react";
 import logo from "../assets/logo.png";
 import "./Header.css";
+import loginIm from "../assets/loginImg.png";
 
 export default function Header() {
+
+  // Función de ejemplo para el futuro onClick
+  const handleBotonClick = () => {
+    // Aquí puedes poner la acción que quieras
+    console.log("Botón clickeado!");
+  };
+
   return (
     <nav className="custom-header navbar navbar-expand-lg shadow-sm p-3">
       <div className="container">
@@ -36,15 +45,35 @@ export default function Header() {
               <a className="nav-link" href="/">Inicio</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/servicios">Servicios</a>
+              <a className="nav-link" href="/servicios">Catalogo</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contacto">Contacto</a>
+              <a className="nav-link" href="/contacto">Vende tu coche</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/DondeEncontrarnos">Contacto</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/DondeEncontrarnos">Donde Encontrarnos</a>
             </li>
           </ul>
+
+          {/* IMAGEN-BOTÓN VISUAL */}
+          <div className="ms-3 d-flex align-items-center">
+            <img
+              src={loginIm}
+              alt="Botón"
+              style={{
+                height: "45px",
+                cursor: "pointer",
+                borderRadius: "8px",
+                transition: "transform 0.2s",
+              }}
+              onMouseOver={e => (e.currentTarget.style.transform = "scale(1.1)")}
+              onMouseOut={e => (e.currentTarget.style.transform = "scale(1)")}
+              onClick={handleBotonClick} // Aquí se puede añadir la acción más adelante
+            />
+          </div>
         </div>
 
       </div>
