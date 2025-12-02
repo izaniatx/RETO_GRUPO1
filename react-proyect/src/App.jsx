@@ -11,6 +11,6 @@ function App() {
       <MainLayout />
     </>
   )
-}
+} 
 
 export default App
