@@ -6,16 +6,15 @@ import MainLayout from './layouts/MainLayout.jsx'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Landingpage from './pages/landingpage.jsx'
 import Inicio from './pages/inicio.jsx'
+import { HashRouter } from 'react-router-dom';
 
 function App() {
 
   return (
-    <Router>
-      <Routes>
+    <Routes>  
         <Route path='/' element={<Landingpage />} />
         <Route path='/inicio' element={<Inicio />} />
-      </Routes>
-    </Router>
+    </Routes>
   )
 } 
 
