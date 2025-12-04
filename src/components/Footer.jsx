@@ -1,3 +1,7 @@
+import React from 'react';
+import './css/Footer.css';
+import logo from "../assets/logo.png";
+
 function Footer() {
     return (    
 <footer className="mt-auto">
@@ -5,14 +9,19 @@ function Footer() {
     <div className="row">
       <div className="col-md-4 mb-3">
         <h5>About Us</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis.</p>
+        <img id="footer-logo"
+          src={logo}
+          alt="Logo"
+          style={{ height: "60px" }}
+          className="me-3"
+        />
       </div>
       <div className="col-md-4 mb-3">
-        <h5>Quick Links</h5>
+        <h5 id="quick">Quick Links</h5>
         <ul className="list-unstyled">
-          <li><a href="#" className="text-decoration-none text-white">Home</a></li>
-          <li><a href="#" className="text-decoration-none text-white">Services</a></li>
-          <li><a href="#" className="text-decoration-none text-white">Contact</a></li>
+          <li><a id="links" href="#" className="text-decoration-none text-white">Home</a></li>
+          <li><a id="links" href="#" className="text-decoration-none text-white">Services</a></li>
+          <li><a id="links" href="#" className="text-decoration-none text-white">Contact</a></li>
         </ul>
       </div>
       <div className="col-md-4 mb-3">
@@ -27,7 +36,7 @@ function Footer() {
     <hr className="mb-4"/>
     <div className="row">
       <div className="col-md-12 text-center">
-        <p>&copy; 2023 Your Company. All rights reserved.</p>
+        <p>&copy; 2025 Aro Automocion. Derechos reservados.</p>
       </div>
     </div>
   </div>

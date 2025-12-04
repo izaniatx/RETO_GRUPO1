@@ -51,11 +51,11 @@ export default function Header() {
             </li>
           </ul>
 
-          <CustomButton className="ms-3" onClick={() => alert("¡Log In!")}>
-            Log In
-          </CustomButton>
+          
         </div>
-
+        <CustomButton className="ms-3" onClick={() => alert("¡Log In!")}>
+          Log In
+        </CustomButton>
       </div>
     </nav>
   );
