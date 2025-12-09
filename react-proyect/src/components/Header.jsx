@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 
 export default function Header() {
   return (
-    <nav id="header-container" className="custom-header navbar navbar-expand-lg shadow-sm p-3">
-      <div className="container">
+    <nav id="header-container" className="custom-header navbar navbar-expand-lg shadow-sm p-3" >
+      <div className="container" >
 
         {/* LOGO */}
         <a className="navbar-brand d-flex align-items-center" href="#">
@@ -51,10 +51,12 @@ export default function Header() {
             </li>
           </ul>
 
-          <CustomButton className="ms-3" onClick={() => alert("¡Log In!")}>
+          
+        </div>
+
+        <CustomButton className="ms-3" onClick={() => alert("¡Log In!")}>
             Log In
           </CustomButton>
-        </div>
 
       </div>
     </nav>

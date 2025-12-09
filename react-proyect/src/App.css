@@ -1,8 +1,9 @@
 #root {
-  width: 1280px;
+  width: 100vw;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0rem;
   text-align: center;
+
 }
 
 .logo {
@@ -16,6 +17,28 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.lead{
+  text-align: justify !important;
+}
+
+
+.mt-auto{
+  background-color: white !important;
+}
+
+#logoFooter{
+  width: 10vw !important;
+  height: 10vh !important;
+}
+
+#footer a{
+  color: grey !important;
+}
+
+#header-container{
+  width: 80vw;
 }
 
 @keyframes logo-spin {
