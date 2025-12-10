@@ -61,13 +61,13 @@ function landingpage() {
               &nbsp; <a href=""><img src={bmw} alt="bmw" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
               &nbsp; <a href="#"><img src={mercedes} alt="mercedes" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
               &nbsp; <a href="#"><img src={audi} alt="audi" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={hyundai} alt="hyundai" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
               &nbsp; <a href="#"><img src={volkswagen} alt="volkswagen" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={ford} alt="ford" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={hyundai} alt="hyundai" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
               &nbsp; <a href="#"><img src={mazda} alt="mazda" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={ford} alt="ford" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
               &nbsp; <a href="#"><img src={nissan} alt="nissan" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={honda} alt="honda" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
               &nbsp; <a href="#"><img src={seat} alt="seat" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={honda} alt="honda" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
             </Marquee> 
           </div>
       </MainLayout>
