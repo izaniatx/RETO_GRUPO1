@@ -1,22 +1,25 @@
 #btn-1{
     background-color: #bd3a3f !important;
     border-color: #bd3a3f !important;
+    border-color: #bd3a3f;
 }
 
 #btn-1:hover{
     background-color: #c26f71 !important;
     color: #ffffff !important;
+    border-color: #c26f71 !important;
 }
 
 #btn-2{
     color: #ffffff !important;
     background-color: #bd3a3e8e !important;
-    border-color: #bd3a3f !important;
+    border-color: #bd3a3e8e !important;
 }
 
 #btn-2:hover{
     background-color: #c26f71 !important;
     color: #ffffff !important;
+    border-color: #c26f71 !important;
 }
 
 #about-us {
@@ -42,7 +45,12 @@ hr {
     height: 400px;
     margin-top: 50px;
     text-align: center;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 /* body{

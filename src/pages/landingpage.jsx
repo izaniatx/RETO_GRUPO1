@@ -3,6 +3,16 @@ import Aro from "../assets/Aro.png";
 import "./css/landingpage.css";
 import LoginModal from "../components/LoginModal";
 import Marquee from "react-fast-marquee";
+import bmw from "../assets/logos/bmw.png";
+import hyundai from "../assets/logos/hyundai.gif";
+import mercedes from "../assets/logos/mercedes.png";
+import audi from "../assets/logos/audi.png";
+import volkswagen from "../assets/logos/volkswagen.png";
+import ford from "../assets/logos/ford.png";
+import mazda from "../assets/logos/mazda.png";
+import nissan from "../assets/logos/nissan.png";
+import honda from "../assets/logos/honda.png";
+import seat from "../assets/logos/seat.png";
 
 function landingpage() {
   return ( 
@@ -47,8 +57,17 @@ function landingpage() {
           </div>
 
           <div id="cuerpo">
-            <Marquee gradient={false} speed={100} pauseOnHover={true} style={{ marginTop: "100px", marginBottom: "50px", fontSize: "24px", fontWeight: "bold" }}>
-              ¡Encuentra tu coche ideal con Aro Automoción! &nbsp; • &nbsp; Amplia selección de vehículos &nbsp; • &nbsp; Financiación a medida &nbsp; • &nbsp; Servicio postventa excepcional &nbsp; • &nbsp; ¡Visítanos hoy mismo! &nbsp; • &nbsp;
+            <Marquee gradient={true} gradientColor= "rgba(0, 0, 0, 0.85)" speed={100} pauseOnHover={true} style={{ marginTop: "100px", marginBottom: "50px", fontSize: "24px", fontWeight: "bold" }}>
+              &nbsp; <a href=""><img src={bmw} alt="bmw" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={mercedes} alt="mercedes" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={audi} alt="audi" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={hyundai} alt="hyundai" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={volkswagen} alt="volkswagen" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={ford} alt="ford" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={mazda} alt="mazda" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={nissan} alt="nissan" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={honda} alt="honda" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              &nbsp; <a href="#"><img src={seat} alt="seat" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
             </Marquee> 
           </div>
       </MainLayout>
