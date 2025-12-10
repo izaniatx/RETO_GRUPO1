@@ -6,12 +6,12 @@ import Marquee from "react-fast-marquee";
 
 function landingpage() {
   return ( 
-    <div> 
+    <div className="landing-bg"> 
       <MainLayout>   
           <div className="container col-xxl-12 px-4 py-5" style={{ color: "white"}}>
             <div style={{ marginBottom: "300px", marginTop: "200px" }}>
               <div>
-                <h1 className="display-5 fw-bold lh-1 mb-3 text-center">Bienvenid@ a Aro Automocion</h1>
+                <h1 className="display-5 fw-bold lh-1 mb-3 text-center">Bienvenid@ a Aro Automoción</h1>
                 <p className="lead text-center">¡Descubre las mejores ofertas en coches!</p>
               </div>
               <div className="d-grid gap-2 d-md-flex justify-content-md-center">
@@ -42,8 +42,14 @@ function landingpage() {
             </div>
 
             <Marquee gradient={false} speed={100} pauseOnHover={true} style={{ marginTop: "100px", marginBottom: "50px", fontSize: "24px", fontWeight: "bold" }}>
-              ¡Encuentra tu coche ideal con Aro Automoción! &nbsp; • &nbsp; Amplia selección de vehículos &nbsp; • &nbsp; Financiación a medida &nbsp; • &nbsp; Servicio postventa excepcional &nbsp; • &nbsp; ¡Visítanos hoy mismo! &nbsp; •
-            </Marquee>
+              ¡Encuentra tu coche ideal con Aro Automoción! &nbsp; • &nbsp; Amplia selección de vehículos &nbsp; • &nbsp; Financiación a medida &nbsp; • &nbsp; Servicio postventa excepcional &nbsp; • &nbsp; ¡Visítanos hoy mismo! &nbsp; • &nbsp;
+            </Marquee> 
+          </div>
+
+          <div id="cuerpo">
+            <Marquee gradient={false} speed={100} pauseOnHover={true} style={{ marginTop: "100px", marginBottom: "50px", fontSize: "24px", fontWeight: "bold" }}>
+              ¡Encuentra tu coche ideal con Aro Automoción! &nbsp; • &nbsp; Amplia selección de vehículos &nbsp; • &nbsp; Financiación a medida &nbsp; • &nbsp; Servicio postventa excepcional &nbsp; • &nbsp; ¡Visítanos hoy mismo! &nbsp; • &nbsp;
+            </Marquee> 
           </div>
       </MainLayout>
     </div> 

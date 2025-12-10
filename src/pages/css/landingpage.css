@@ -9,7 +9,8 @@
 }
 
 #btn-2{
-    color: #bd3a3f !important;
+    color: #ffffff !important;
+    background-color: #bd3a3e8e !important;
     border-color: #bd3a3f !important;
 }
 
@@ -24,11 +25,25 @@
     border-radius: 10px;
 }
 
-body{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/conses.jpg'); background-size: cover;
+hr {
+    border-top: 2px solid #bd3a3f;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.landing-bg { 
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/conses.jpg');
+    background-size: cover;
     background-position: center;
     color: #ffffff;
-} 
+}
+
+#cuerpo {
+    width: 100% !important;
+    height: 400px;
+    margin-top: 50px;
+    text-align: center;
+    background-color: black;
+}
 
 /* body{
     background-color: #000000;

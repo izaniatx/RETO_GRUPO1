@@ -48,7 +48,7 @@ export default function Header() {
               <Link className="nav-link" to="/contacto">Contacto</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/DondeEncontrarnos">Donde Encontrarnos</Link>
+              <Link className="nav-link" to="/DondeEncontrarnos">Dónde Encontrarnos</Link>
             </li>
           </ul>
 
@@ -57,7 +57,7 @@ export default function Header() {
         <CustomButton className="ms-3"
           data-bs-toggle="modal" data-bs-target="#loginModal" 
         >
-          Iniciar Sesion
+          Iniciar Sesión
         </CustomButton>
         <LoginModal />
       </div>
