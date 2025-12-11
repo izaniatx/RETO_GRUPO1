@@ -61,6 +61,7 @@
 #cnt {
     border-color: #bd3a3f;
     background-color: white;
+    border-bottom: 1px solid #bd3a3f;
     width: 90%;
     margin : 0 auto;
     border-radius: 15px;

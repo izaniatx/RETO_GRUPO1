@@ -55,7 +55,7 @@ const LoginModal = () => {
                   </div>
                   <p className="text-center text-muted mt-4">
                     ¿No tienes una cuenta?{" "}
-                    <a href="#!" className="text-decoration-none">
+                    <a  href="/#/registro" className="text-decoration-none">
                       Registrarse
                     </a>.
                   </p>
