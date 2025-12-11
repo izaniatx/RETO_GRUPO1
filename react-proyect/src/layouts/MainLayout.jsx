@@ -8,7 +8,7 @@ function MainLayout({ children }) {
 
             <Header />
 
-            <main className="container flex-grow-1 py-4">
+            <main className="container flex-grow-1 py-4" id="contenedorPrincipalLanding">
                 {children}
             </main>
              

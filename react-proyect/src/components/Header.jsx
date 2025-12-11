@@ -6,14 +6,14 @@ import {Link} from 'react-router-dom';
 export default function Header() {
   return (
     <nav id="header-container" className="custom-header navbar navbar-expand-lg shadow-sm p-3" >
-      <div className="container" >
+      <div className="container" style={{minWidth: "80vw"}} >
 
         {/* LOGO */}
         <a className="navbar-brand d-flex align-items-center" href="#">
           <img
             src={logo}
             alt="Logo"
-            style={{ height: "60px" }}
+            style={{ height: "50px"}}
             className="me-3"
           />
         </a>
@@ -32,7 +32,7 @@ export default function Header() {
         </button>
 
         {/* NAV ENLACES */}
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse" style={{marginRight: "50px"}}>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/inicio">Inicio</Link>
