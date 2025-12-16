@@ -2,6 +2,23 @@ import React from "react";
 import "./css/LoginModal.css";
 
 const LoginModal = () => {
+  const handleRegisterClick = (e) => {
+    e.preventDefault();
+
+    // Intentar cerrar el modal de Bootstrap si existe la instancia
+    const modalEl = document.getElementById("loginModal");
+    if (modalEl) {
+      const bs = window.bootstrap;
+      const instance = bs?.Modal.getInstance(modalEl) || (bs?.Modal ? new bs.Modal(modalEl) : null);
+      if (instance && typeof instance.hide === "function") {
+        instance.hide();
+      }
+    }
+
+    // Cambiar la ruta hash sin enviar el formulario
+    window.location.hash = "#/registro";
+  };
+
   return (
     <div
       className="modal fade"
@@ -55,7 +72,8 @@ const LoginModal = () => {
                   </div>
                   <p className="text-center text-muted mt-4">
                     ¿No tienes una cuenta?{" "}
-                    <a  href="/RETO/#/registro" className="text-decoration-none">
+                    
+                    <a href="/RETO/#/registro" className="text-decoration-none" onClick={handleRegisterClick}>
                       Registrarse
                     </a>.
                   </p>
