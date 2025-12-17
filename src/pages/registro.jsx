@@ -14,7 +14,7 @@ function Registro() {
         <div className="registro-bg" style={{ position: 'relative' }}>
             <button
                 id="btn-atras"
-                onClick={() => window.location.href = '/'}
+                onClick={() => window.location.href = '/RETO/'}
                 style={{ position: 'absolute', top: '10px', left: '10px', zIndex: 3 }}
             >
                 &larr;
