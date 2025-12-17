@@ -11,11 +11,6 @@ function formValidator() {
 
     const atPos = email.indexOf('@');
 
-    // comprobar requisitos de contraseña: mayúscula, número y carácter especial
-    const tieneMayuscula = /[A-Z]/.test(contrasenya);
-    const tineNumero = /\d/.test(contrasenya); 
-    const tieneCaracter = /[^A-Za-z0-9]/.test(contrasenya);
-
     if (!nombre || !apellido || !email || !usuario || !contrasenya || !telefono) {
         alert("Por favor, completa todos los campos.");
         return false;
