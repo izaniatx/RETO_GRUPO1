@@ -5,13 +5,13 @@ import { validateField, validateForm } from '../lib/validators';
     function Input(props) {
         return (
             <div className="mb-3">
-                <label className="form-label">{props.label}</label>
+                <label className="r-form-label">{props.label}</label>
                 <input
                     {...props}
-                    className={`form-control ${props.error ? 'input-error' : ''}`}
+                    className={`r-form-control ${props.error ? 'r-input-error' : ''}`}
                 />
                 {props.error && (
-                    <small className="error">{props.error}</small>
+                    <small className="r-error">{props.error}</small>
                 )}
             </div>
         );
@@ -56,34 +56,34 @@ function Registro() {
     };
 
     return (
-        <div className="registro-bg" style={{ position: 'relative' }}>
+        <div className="r-registro-bg" style={{ position: 'relative' }}>
             <button
-                className="btn-atras"
+                className="r-btn-atras"
                 onClick={() => window.location.href = '/RETO/'}
                 aria-label="Volver"
             >
                 ←
             </button>
-            <div className="container mt-5 ">
+            <div className="container">
                 <h2 className="mb-4 text-white">REGISTRO</h2>
 
-                <form onSubmit={handleSubmit} className="cnt">
+                <form onSubmit={handleSubmit} className="r-cnt">
                     <div className="row">
 
-                        <div className="col-md-6 registro-inputs">
+                        <div className="col-md-6 r-registro-inputs">
                             <Input label="Nombre" name="firstName" error={errors.firstName} onChange={handleChange} onBlur={handleBlur} />
                             <Input label="Correo Electrónico" name="email" error={errors.email} onChange={handleChange} onBlur={handleBlur} />
                             <Input label="Usuario" name="usuario" error={errors.usuario} onChange={handleChange} onBlur={handleBlur} />
                         </div>
 
-                        <div className="col-md-6 registro-inputs">
+                        <div className="col-md-6 r-registro-inputs">
                             <Input label="Apellido" name="lastName" error={errors.lastName} onChange={handleChange} onBlur={handleBlur} />
                             <Input label="Contraseña" name="contrasenya" type="password" error={errors.contrasenya} onChange={handleChange} onBlur={handleBlur} />
                             <Input label="Teléfono" name="telefono" type="tel" error={errors.telefono} onChange={handleChange} onBlur={handleBlur} />
                         </div>
 
                         <div className="text-center mt-4">
-                            <button type="submit" className="btn btn-primary">
+                            <button type="submit" className="r-btn-primary">
                                 Registrarse
                             </button>
                         </div>

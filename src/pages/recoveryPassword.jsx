@@ -1,4 +1,4 @@
-import './css/registro.css';
+import './css/recoveryPassword.css';
 import React, { useState } from 'react';
 import { validateField, validateForm } from '../lib/validators';
 
@@ -46,7 +46,6 @@ function RecoveryPassword() {
         setErrors(formErrors);
 
         if (Object.keys(formErrors).length === 0) {
-            // 👉 Opción FRONTEND SIMPLE (abre Gmail)
             const subject = 'Recuperación de contraseña';
             const body = `Hola,\n\nSolicito recuperar la contraseña del usuario: ${values.usuario}\n\nGracias.`;
 
