@@ -1,4 +1,5 @@
 #btn-1{
+    width: 350px;
     background-color: #bd3a3f !important;
     border-color: #bd3a3f !important;
     border-color: #bd3a3f;
@@ -11,6 +12,10 @@
 }
 
 #btn-2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 350px;
     color: #ffffff !important;
     background-color: #bd3a3e8e !important;
     border-color: #bd3a3e8e !important;
@@ -19,7 +24,10 @@
 #btn-2:hover{
     background-color: #c26f71 !important;
     color: #ffffff !important;
+    height: 1000px;
+    width: 3070px;
     border-color: #c26f71 !important;
+    transition: 10s;
 }
 
 #about-us {

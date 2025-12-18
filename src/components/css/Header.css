@@ -33,3 +33,7 @@
     border-radius: 10px;
     transition: 0.3s;
 }
+
+.btn-login {
+    width: 150px !important; 
+}

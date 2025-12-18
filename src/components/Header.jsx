@@ -54,7 +54,7 @@ export default function Header() {
 
           
         </div>
-        <CustomButton className="ms-3"
+        <CustomButton className="ms-3 btn-login"
           data-bs-toggle="modal" data-bs-target="#loginModal" 
         >
           Iniciar Sesión
