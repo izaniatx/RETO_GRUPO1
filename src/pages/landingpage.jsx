@@ -14,6 +14,7 @@ import nissan from "../assets/logos/nissan.png";
 import honda from "../assets/logos/honda.png";
 import seat from "../assets/logos/seat.png";
 
+
 function landingpage() {
   return ( 
     <div className="landing-bg"> 
@@ -30,7 +31,7 @@ function landingpage() {
                     >Iniciar sesión</button>
                     <LoginModal />
                     <button type="button" id="btn-2" className="btn btn-outline-secondary btn-lg px-4"
-                      onClick={() => window.location.href = '/#/inicio'}
+                      onClick={() => window.location.href = '/RETO/#/inicio'}
                     >Más información</button>
               </div>
             </div>
@@ -50,6 +51,7 @@ function landingpage() {
                 </p>  
               </div>
             </div>
+
             
             <Marquee gradient={false} speed={100} pauseOnHover={true} style={{ marginTop: "100px", marginBottom: "50px", fontSize: "24px", fontWeight: "bold" }}>
               ¡Encuentra tu coche ideal con Aro Automoción! &nbsp; • &nbsp; Amplia selección de vehículos &nbsp; • &nbsp; Financiación a medida &nbsp; • &nbsp; Servicio postventa excepcional &nbsp; • &nbsp; ¡Visítanos hoy mismo! &nbsp; • &nbsp;

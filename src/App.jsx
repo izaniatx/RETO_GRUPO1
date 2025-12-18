@@ -4,6 +4,7 @@ import Landingpage from './pages/landingpage.jsx'
 import Inicio from './pages/inicio.jsx'
 import Registro from './pages/registro.jsx'
 import Catalogo from './pages/catalogo.jsx'
+import RecoveryPassword from './pages/recoveryPassword.jsx'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Route path='/inicio' element={<Inicio />} />
         <Route path='/registro' element={<Registro />} />
         <Route path='/catalogo' element={<Catalogo />} />
+        <Route path='/recoveryPassword' element={<RecoveryPassword />} />
     </Routes>
   )
 } 

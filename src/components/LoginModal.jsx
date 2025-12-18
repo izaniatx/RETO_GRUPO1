@@ -19,6 +19,23 @@ const LoginModal = () => {
     window.location.hash = "#/registro";
   };
 
+  const handleRecoveryClick = (e) => {
+    e.preventDefault();
+
+    // Intentar cerrar el modal de Bootstrap si existe la instancia
+    const modalEl = document.getElementById("loginModal");
+    if (modalEl) {
+      const bs = window.bootstrap;
+      const instance = bs?.Modal.getInstance(modalEl) || (bs?.Modal ? new bs.Modal(modalEl) : null);
+      if (instance && typeof instance.hide === "function") {
+        instance.hide();
+      }
+    }
+
+    // Cambiar la ruta hash sin enviar el formulario
+    window.location.hash = "#/recoveryPassword";
+  };
+
   return (
     <div
       className="modal fade"
@@ -64,6 +81,13 @@ const LoginModal = () => {
                       required
                     />
                   </div>
+                  <p className="text-center text-muted mt-4">
+                    ¿Has olvidado tu contraseña?{" "}
+                    
+                    <a href="/RETO/#/recoveryPassword" className="text-decoration-none" onClick={handleRecoveryClick}>
+                      Recuperala
+                    </a>.
+                  </p>
 
                   <div className="d-grid">
                     <button type="submit" id="boton-inicio-sesion" className="btn btn-dark btn-lg">
