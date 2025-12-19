@@ -13,6 +13,7 @@ import mazda from "../assets/logos/mazda.png";
 import nissan from "../assets/logos/nissan.png";
 import honda from "../assets/logos/honda.png";
 import seat from "../assets/logos/seat.png";
+import { div } from "motion/react-client";
 
 
 function landingpage() {
@@ -51,29 +52,72 @@ function landingpage() {
                 </p>  
               </div>
             </div>
-
+            
             
             <Marquee gradient={false} speed={100} pauseOnHover={true} style={{ marginTop: "100px", marginBottom: "50px", fontSize: "24px", fontWeight: "bold" }}>
               ¡Encuentra tu coche ideal con Aro Automoción! &nbsp; • &nbsp; Amplia selección de vehículos &nbsp; • &nbsp; Financiación a medida &nbsp; • &nbsp; Servicio postventa excepcional &nbsp; • &nbsp; ¡Visítanos hoy mismo! &nbsp; • &nbsp;
             </Marquee> 
           </div>
+          <div className="container-card">
+            <h2 className="mb-5">¿Por qué elegir Aro Automoción?</h2>
+            <div className="container">
+              <div className="row justify-content-center">
+                
+                {/* Tarjeta 1 */}
+                <div className="col-md-4 mb-4">
+                  <div className="card h-100 text-center bg-dark text-white border-light">
+                    <div className="card-body">
+                      <h5 className="card-title">Vehículos de calidad</h5>
+                      <p className="card-text">
+                        Solo trabajamos con coches revisados y certificados para que tengas la máxima confianza en tu compra.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
+                {/* Tarjeta 2 */}
+                <div className="col-md-4 mb-4">
+                  <div className="card h-100 text-center bg-dark text-white border-light">
+                    <div className="card-body">
+                      <h5 className="card-title">Financiación a medida</h5>
+                      <p className="card-text">
+                        Te ayudamos a encontrar la mejor opción de financiación según tus necesidades y presupuesto.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tarjeta 3 */}
+                <div className="col-md-4 mb-4">
+                  <div className="card h-100 text-center bg-dark text-white border-light">
+                    <div className="card-body">
+                      <h5 className="card-title">Servicio postventa</h5>
+                      <p className="card-text">
+                        Nuestro equipo de atención al cliente está disponible para ayudarte incluso después de la compra.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div id="cuerpo">
-            <Marquee gradient={true} gradientColor= "rgba(0, 0, 0, 0.85)" speed={100} pauseOnHover={true} style={{ marginTop: "100px", marginBottom: "50px", fontSize: "24px", fontWeight: "bold" }}>
-              &nbsp; <a href=""><img src={bmw} alt="bmw" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={mercedes} alt="mercedes" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={audi} alt="audi" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={volkswagen} alt="volkswagen" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={hyundai} alt="hyundai" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={mazda} alt="mazda" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={ford} alt="ford" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={nissan} alt="nissan" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={seat} alt="seat" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-              &nbsp; <a href="#"><img src={honda} alt="honda" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
-            </Marquee> 
+              <Marquee gradient={true} gradientColor= "rgba(0, 0, 0, 0.85)" speed={100} pauseOnHover={true} style={{ marginTop: "100px", marginBottom: "50px", fontSize: "24px", fontWeight: "bold" }}>
+                &nbsp; <a href=""><img src={bmw} alt="bmw" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+                &nbsp; <a href="#"><img src={mercedes} alt="mercedes" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+                &nbsp; <a href="#"><img src={audi} alt="audi" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+                &nbsp; <a href="#"><img src={volkswagen} alt="volkswagen" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+                &nbsp; <a href="#"><img src={hyundai} alt="hyundai" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+                &nbsp; <a href="#"><img src={mazda} alt="mazda" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+                &nbsp; <a href="#"><img src={ford} alt="ford" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+                &nbsp; <a href="#"><img src={nissan} alt="nissan" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+                &nbsp; <a href="#"><img src={seat} alt="seat" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+                &nbsp; <a href="#"><img src={honda} alt="honda" style={{ height: 200, verticalAlign: "middle" }} /></a> &nbsp; 
+              </Marquee> 
           </div>
       </MainLayout>
-    </div> 
+    </div>
+
   );
 }
 

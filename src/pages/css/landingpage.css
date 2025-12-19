@@ -1,3 +1,4 @@
+
 #btn-1{
     width: 350px;
     background-color: #bd3a3f !important;
@@ -61,7 +62,18 @@ hr {
     padding-bottom: 1px;
 }
 
-/* body{
-    background-color: #000000;
-    color: #ffffff;
-} */
+.container-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
