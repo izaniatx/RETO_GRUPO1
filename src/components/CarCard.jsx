@@ -17,7 +17,7 @@ const CarCard = ({ coche }) => {
 
       {/* Información del coche */}
       <div className="car-info">
-        <span style={{ fontSize: '0.75rem', color: '#2563eb', fontWeight: 'bold', textTransform: 'uppercase' }}>
+        <span style={{ fontSize: '0.75rem', color: '#bd3a3f', fontWeight: 'bold', textTransform: 'uppercase' }}>
           {coche.marca}
         </span>
         <h3 style={{ margin: '5px 0', fontSize: '1.2rem' }}>{coche.modelo}</h3>
@@ -30,7 +30,7 @@ const CarCard = ({ coche }) => {
             {coche.precio.toLocaleString('es-ES')}€
           </span>
           <button style={{ 
-            backgroundColor: '#2563eb', 
+            backgroundColor: '#bd3a3f', 
             color: 'white', 
             border: 'none', 
             padding: '8px 12px', 

@@ -1,17 +1,11 @@
+import React from 'react';
 import './css/Catalogo.css';
 
 const Sidebar = ({ filters, setFilters, searchTerm, setSearchTerm }) => {
   
-  const handleMarcaChange = (marca) => {
-    const nuevasMarcas = filters.marcas.includes(marca)
-      ? filters.marcas.filter(m => m !== marca)
-      : [...filters.marcas, marca];
-    setFilters({ ...filters, marcas: nuevasMarcas });
-  };
-
-  // Función para resetear todo
+  // Función para resetear todos los filtros al estado inicial
   const resetFilters = () => {
-    setSearchTerm(""); // Limpia el input del buscador
+    setSearchTerm("");
     setFilters({
       searchQuery: "",
       marcas: [],
@@ -20,81 +14,84 @@ const Sidebar = ({ filters, setFilters, searchTerm, setSearchTerm }) => {
     });
   };
 
-  // Comprobar si hay algún filtro activo para mostrar u ocultar el botón
-  const hayFiltrosActivos = 
-    searchTerm !== "" || 
-    filters.marcas.length > 0 || 
-    filters.precioMax !== 100000 || 
-    filters.combustible !== 'todos';
+  // Función para manejar el cambio en los checkboxes de marcas
+  const handleMarcaChange = (marca) => {
+    const nuevasMarcas = filters.marcas.includes(marca)
+      ? filters.marcas.filter(m => m !== marca)
+      : [...filters.marcas, marca];
+    
+    setFilters({ ...filters, marcas: nuevasMarcas });
+  };
 
   return (
-    <aside className="w-full md:w-64 bg-white p-6 rounded-xl shadow-sm h-fit sticky top-4">
-      <h2 className="text-xl font-bold mb-6">Filtros</h2>
-
-      {hayFiltrosActivos && (
-          <button 
-            onClick={resetFilters}
-            className="text-xs text-red-500 hover:text-red-700 font-semibold underline transition-colors"
-          >
+    <aside className="sidebar">
+      {/* Cabecera con botón de limpiar */}
+      <div className="sidebar-header">
+        <h2>Filtros</h2>
+        {(searchTerm !== "" || filters.marcas.length > 0 || filters.precioMax < 100000) && (
+          <button className="btn-reset" onClick={resetFilters}>
             Limpiar
           </button>
         )}
+      </div>
 
-      {/* Buscador de texto */}
-      <div className="mb-6">
-        <label className="block text-sm font-semibold mb-2">Buscar</label>
+      {/* Grupo 1: Buscador de texto */}
+      <div className="filter-group">
+        <label className="filter-label">Buscar Modelo</label>
         <input 
-          type="text"
+          type="text" 
+          className="search-input"
+          placeholder="Ej: Corolla, Serie 3..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Modelo o marca..."
-          className="w-full p-2 border rounded-lg outline-none focus:border-blue-500"
         />
       </div>
 
-      {/* Filtro de Marcas */}
-      <div className="mb-6">
-        <label className="block text-sm font-semibold mb-2">Marcas</label>
-        {['Toyota', 'BMW', 'Tesla', 'Audi'].map(marca => (
-          <label key={marca} className="flex items-center gap-2 mb-2 cursor-pointer text-sm">
+      {/* Grupo 2: Selección de Marcas */}
+      <div className="filter-group">
+        <label className="filter-label">Marcas</label>
+        {['Toyota', 'BMW', 'Audi', 'Tesla', 'Mercedes'].map(marca => (
+          <label key={marca} className="checkbox-item">
             <input 
               type="checkbox" 
               checked={filters.marcas.includes(marca)}
               onChange={() => handleMarcaChange(marca)}
-              className="rounded text-blue-600"
             />
-            {marca}
+            <span>{marca}</span>
           </label>
         ))}
       </div>
 
-      {/* Filtro de Precio */}
-      <div className="mb-6">
-        <label className="block text-sm font-semibold mb-2">
-          Precio Máximo: <span className="text-blue-600">{filters.precioMax}€</span>
-        </label>
+      {/* Grupo 3: Rango de Precio */}
+      <div className="filter-group">
+        <label className="filter-label">Precio Máximo</label>
         <input 
           type="range" 
+          className="range-slider"
           min="10000" 
           max="100000" 
-          step="5000"
+          step="1000"
           value={filters.precioMax}
           onChange={(e) => setFilters({...filters, precioMax: parseInt(e.target.value)})}
-          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
         />
+        <span className="price-display">
+          {filters.precioMax.toLocaleString('es-ES')}€
+        </span>
       </div>
 
-      {/* Filtro de Combustible */}
-      <div>
-        <label className="block text-sm font-semibold mb-2">Combustible</label>
+      {/* Grupo 4: Tipo de Combustible */}
+      <div className="filter-group">
+        <label className="filter-label">Combustible</label>
         <select 
+          className="search-input" // Reutilizamos estilo de input para el select
           value={filters.combustible}
           onChange={(e) => setFilters({...filters, combustible: e.target.value})}
-          className="w-full p-2 border rounded-lg outline-none bg-white"
+          style={{ cursor: 'pointer' }}
         >
           <option value="todos">Todos</option>
           <option value="hibrido">Híbrido</option>
           <option value="electrico">Eléctrico</option>
+          <option value="gasolina">Gasolina</option>
           <option value="diesel">Diésel</option>
         </select>
       </div>
