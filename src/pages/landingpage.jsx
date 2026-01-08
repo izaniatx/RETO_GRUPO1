@@ -6,6 +6,7 @@ import c1 from "../assets/coches/coche.png";
 import c2 from "../assets/coches/coche2.png";
 import c3 from "../assets/coches/coche3.png";
 import "./css/landingpage.css";
+import { href } from "react-router-dom";
 
 function landingpage() {
   return (
@@ -19,8 +20,8 @@ function landingpage() {
 
           </div>
           <div className="d-grid gap-2 d-md-flex justify-content-md-center">
-            <button type="button" id="btn-1" className="btn btn-primary btn-lg px-4 me-md-2">Iniciar sesión</button>
-            <button type="button" id="btn-2" className="btn btn-outline-secondary btn-lg px-4">Más información</button>
+            <button type="button" id="btn-1" className="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesión</button>
+            <button type="button" id="btn-2" className="btn btn-outline-secondary btn-lg px-4" onClick={() => window.location.href ="/RETO/#/inicio"}>Más información</button>
           </div>
 
 
@@ -79,7 +80,7 @@ function landingpage() {
 
 
           <div>
-            <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center m-4 gap-4">
+            <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center m-4 gap-4 py-5">
 
               {/* Card del formulario */}
               <div className="card shadow p-4"

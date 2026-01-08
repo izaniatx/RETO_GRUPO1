@@ -1,14 +1,12 @@
 import MainLayout from "../layouts/MainLayout";
-import CatalogoPage from "../components/CatalogoPage.jsx";
 
-function catalogo() { 
+function vendeTuCoche() { 
     return (
         <div>
             <MainLayout > 
-                <CatalogoPage />
             </MainLayout>
         </div>
     );
 }
 
-export default catalogo;
+export default vendeTuCoche;
