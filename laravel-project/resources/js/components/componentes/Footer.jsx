@@ -1,12 +1,13 @@
-import logo from '../assets/logo.png';
-import './css/Footer.css';
+import '../../../css/Footer.css';
+import '../../App.css';
+import {Link} from '@inertiajs/react';
 
 function Footer() {
     return (    
 <footer className="mt-auto">
 
    <div id='logoFooter'>
-         <img src={logo} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="100" height="1000" loading="lazy"/>
+         <img src="/images/logo.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="100" height="1000" loading="lazy"/>
       </div>
   <div className="container" id='footer'>
     <div className="row">

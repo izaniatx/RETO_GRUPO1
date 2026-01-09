@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/LoginModal.css";
+import "../../../css/LoginModal.css";
 
 const LoginModal = () => {
   const handleRegisterClick = (e) => {

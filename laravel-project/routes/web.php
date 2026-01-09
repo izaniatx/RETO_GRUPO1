@@ -11,7 +11,7 @@ use Laravel\Fortify\Features;
 })->name('home');*/
 
 Route::get('/', function () {
-    return Inertia::render('home');
+    return Inertia::render('inicio');
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {

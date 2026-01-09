@@ -1,7 +1,7 @@
-import logo from "../assets/logo.png";
+
 import CustomButton from "./CustomButton";
-import "./css/Header.css";
-import {Link} from 'react-router-dom';
+import "../../../css/Header.css";
+import {Link} from '@inertiajs/react';
 import LoginModal from "./LoginModal";
 
 export default function Header() {
@@ -12,7 +12,7 @@ export default function Header() {
         {/* LOGO */}
         <a className="navbar-brand d-flex align-items-center" href="#">
           <img
-            src={logo}
+            src="/images/logo.png"
             alt="Logo"
             style={{ height: "60px" }}
             className="me-3"
