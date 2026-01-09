@@ -29,7 +29,7 @@ const CarCard = ({ coche }) => {
           <span className="car-price">
             {coche.precio.toLocaleString('es-ES')}€
           </span>
-          <button id="ver-mas-boton" style={{ 
+          <button className="hover-pers active-pers" style={{ 
             backgroundColor: '#bd3a3f', 
             color: 'white', 
             border: 'none', 

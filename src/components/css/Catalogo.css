@@ -230,8 +230,24 @@
     gap: 25px;
 }
 
-#ver-mas-boton:hover {
-    width: 110px !important;
-    height: 40px !important;
-    transition: all 3.7s !important;
+#ver-mas-boton {
+    background-color: #bd3a3f !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    font-size: 0.9rem !important;
+    cursor: pointer !important;
+    width: 100px !important;
+    height: 35px !important;
+    transition: all 0.3s !important;
+}
+
+.hover-pers:hover{
+    transform: scale(1.05); /* Crece un 8% */
+    filter: brightness(1.1); /* Opcional: le da un pelín más de brillo */
+}
+
+.active-pers:active{
+    transform: scale(0.95); /* Efecto de "presionar" */
 }

@@ -3,6 +3,7 @@ import CustomButton from "./CustomButton";
 import "./css/Header.css";
 import {Link} from 'react-router-dom';
 import LoginModal from "./LoginModal";
+import "./css/Catalogo.css";
 
 export default function Header() {
   return (
@@ -54,7 +55,7 @@ export default function Header() {
 
           
         </div>
-        <CustomButton className="ms-3 btn-login"
+        <CustomButton className="ms-3 btn-login hover-pers active-pers"
           data-bs-toggle="modal" data-bs-target="#loginModal" 
         >
           Iniciar Sesión
