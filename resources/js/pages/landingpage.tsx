@@ -1,14 +1,14 @@
-
 import MainLayout from "../layouts/MainLayout";
+import "../../css/landingpage.css";
+import "../App.css";
+import {Link} from '@inertiajs/react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-import "./css/landingpage.css";
-import "../components/css/Catalogo.css";
-import React from "react";
-import { router } from "@inertiajs/react";
 
 function landingpage() {
   return (
-    <div className="landing" style={{ paddingTop: "80px" }}>
+    <div className="landing">
       <MainLayout>
         <div className="container col-xxl-12 px-4 py-5 d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "80vh" }}>
 
@@ -18,8 +18,8 @@ function landingpage() {
 
           </div>
           <div className="d-grid gap-2 d-md-flex justify-content-md-center">
-            <button type="button" id="btn-1" className="btn btn-primary btn-lg px-4 me-md-2 hover-pers active-pers" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesión</button>
-            <button type="button" id="btn-2" className="btn btn-outline-secondary btn-lg px-4 hover-pers active-pers" onClick={() => router.visit("/inicio")}>Más información</button>
+            <button type="button" id="btn-1" className="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesión</button>
+            <button type="button" id="btn-2" className="btn btn-outline-secondary btn-lg px-4" onClick={() => window.location.href ="/inicio"}>Más información</button>
           </div>
 
 
@@ -48,7 +48,7 @@ function landingpage() {
               <div className="card shadow p-3 mb-4 rounded cartasOfertas"
                 style={{ width: "100%", maxWidth: "27rem", height: "22rem" }}>
                 <div className="card-body">
-                  <img src={"./assets/coches/coche.png"} className="rounded w-100 mb-2" style={{ height: "60%", objectFit: "cover" }} />
+                  <img src="/images/coches/coche.png" className="rounded w-100 mb-2" style={{ height: "60%", objectFit: "cover" }} />
                   <h5 className="card-title">TITULO</h5>
                   <p className="card-text">Parrafo prueba</p>
                 </div>
@@ -57,7 +57,7 @@ function landingpage() {
               <div className="card shadow p-3 mb-4 rounded cartasOfertas"
                 style={{ width: "100%", maxWidth: "27rem", height: "22rem" }}>
                 <div className="card-body">
-                  <img src={'./assets/coches/coche2.png'} className="rounded w-100 mb-2" style={{ height: "60%", objectFit: "cover" }} />
+                  <img src="/images/coches/coche2.png" className="rounded w-100 mb-2" style={{ height: "60%", objectFit: "cover" }} />
                   <h5 className="card-title">TITULO</h5>
                   <p className="card-text">Parrafo prueba</p>
                 </div>
@@ -66,7 +66,7 @@ function landingpage() {
               <div className="card shadow p-3 mb-4 rounded cartasOfertas"
                 style={{ width: "100%", maxWidth: "27rem", height: "22rem" }}>
                 <div className="card-body">
-                  <img src={"./assets/coches/coche3.png"} className="rounded w-100 mb-2" style={{ height: "60%", objectFit: "cover" }} />
+                  <img src="/images/coches/coche3.png" className="rounded w-100 mb-2" style={{ height: "60%", objectFit: "cover" }} />
                   <h5 className="card-title">TITULO</h5>
                   <p className="card-text">Parrafo prueba</p>
                 </div>
@@ -98,7 +98,7 @@ function landingpage() {
 
                   <div className="mb-3">
                     <label className="form-label">Mensaje</label>
-                    <textarea className="form-control" rows={5}
+                    <textarea className="form-control" 
                       placeholder="Escribe tu mensaje aquí..." required />
                   </div>
 
@@ -108,7 +108,7 @@ function landingpage() {
 
               {/* Imagen */}
               <div className="d-flex justify-content-center align-items-center">
-                <img src={'./assets/Aro.png'}
+                <img src="/images/Aro.png"
                   alt="Aro"
                   className="rounded w-100"
                   style={{ maxWidth: "500px", height: "500px" }} />

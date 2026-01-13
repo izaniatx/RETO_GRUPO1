@@ -1,11 +1,6 @@
 import MainLayout from "../layouts/MainLayout";
 import { Link } from '@inertiajs/react';
-import "./css/inicio.css";
-import bmw from "../assets/logos/bmw.png";
-import audi from "../assets/logos/audi.png";
-import honda from "../assets/logos/honda.png";
-import mercedes from "../assets/logos/mercedes.png";
-import volkswagen from "../assets/logos/volkswagen.png";
+import "../../css/inicio.css";
 
 function Inicio() { 
     return (
@@ -78,31 +73,31 @@ function Inicio() {
                         
                         {/* Marca 1 */}
                         <div className="brand-card">
-                            <img src={bmw} alt="BMW" />
+                            <img src={"./images/logos/bmw.png"} alt="BMW" />
                             <span>BMW</span>
                         </div>
                         
                         {/* Marca 2 */}
                         <div className="brand-card">
-                            <img src={audi} alt="Audi" />
+                            <img src={"./images/logos/audi.png"} alt="Audi" />
                             <span>AUDI</span>
                         </div>
 
                         {/* Marca 3 */}
                         <div className="brand-card">
-                            <img src={mercedes} alt="Mercedes" />
+                            <img src={"./images/logos/mercedes.png"} alt="Mercedes" />
                             <span>MERCEDES</span>
                         </div>
 
                         {/* Marca 4 */}
                         <div className="brand-card">
-                            <img src={honda} alt="Honda" />
+                            <img src={"./images/logos/honda.png"} alt="Honda" />
                             <span>HONDA</span>
                         </div>
 
                         {/* Marca 5 */}
                         <div className="brand-card">
-                            <img src={volkswagen} alt="VW" />
+                            <img src={"./images/logos/volkswagen.png"} alt="VW" />
                             <span>VOLKSWAGEN</span>
                         </div>
                     </div>
