@@ -1,8 +1,31 @@
-import './css/recoveryPassword.css';
+import '../../css/recoveryPassword.css';
 import React, { useState } from 'react';
 import { validateField, validateForm } from '../lib/validators';
 
-function Input(props) {
+interface HandleChangeEvent {
+    target: {
+        name: string;
+        value: string;
+    };
+}
+
+interface HandleBlurEvent {
+    target: {
+        name: string;
+        value: string;
+    };
+}
+
+interface InputProps {
+    label: string;
+    name: string;
+    type?: string;
+    error?: string;
+    onChange: (e: HandleChangeEvent) => void;
+    onBlur: (e: HandleBlurEvent) => void;
+}
+
+function Input(props: InputProps) {
     return (
         <div className="mb-3">
             <label className="form-label">{props.label}</label>
@@ -10,28 +33,21 @@ function Input(props) {
                 {...props}
                 className={`form-control ${props.error ? 'input-error' : ''}`}
             />
-            {props.error && (
-                <small className="error">{props.error}</small>
-            )}
+            {props.error && <div className="text-danger">{props.error}</div>}
         </div>
     );
 }
 
 function RecoveryPassword() {
+    const [values, setValues] = useState<{ usuario: string; email: string }>({ usuario: '', email: '' });
+    const [errors, setErrors] = useState<{ usuario?: string; email?: string }>({});
 
-    const [values, setValues] = useState({
-        usuario: '',
-        email: ''
-    });
-
-    const [errors, setErrors] = useState({});
-
-    const handleChange = (e) => {
+    const handleChange = (e: HandleChangeEvent) => {
         const { name, value } = e.target;
         setValues(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleBlur = (e) => {
+    const handleBlur = (e: HandleBlurEvent) => {
         const { name, value } = e.target;
         setErrors(prev => ({
             ...prev,
@@ -39,7 +55,11 @@ function RecoveryPassword() {
         }));
     };
 
-    const handleSubmit = (e) => {
+    interface HandleSubmitEvent {
+        preventDefault: () => void;
+    }
+
+    const handleSubmit = (e: HandleSubmitEvent) => {
         e.preventDefault();
 
         const formErrors = validateForm(values);
@@ -58,13 +78,13 @@ function RecoveryPassword() {
         <div className="registro-bg" style={{ position: 'relative' }}>
             <button
                 className="btn-atras"
-                onClick={() => window.location.href = '/RETO/'}
+                onClick={() => window.location.href = '/'}
                 aria-label="Volver"
             >
                 ←
             </button>
 
-            <div className="container mt-5 ">
+            <div className="container mt-5 text-center">
                 <h2 className="mb-4 text-white">RECUPERAR CONTRASEÑA</h2>
 
                 <form onSubmit={handleSubmit} className="cnt">

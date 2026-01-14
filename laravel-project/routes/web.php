@@ -37,6 +37,10 @@ Route::get('/admin/usuarios', function () {
     return Inertia::render('admin/usuarios');
 });
 
+Route::get('/recoveryPassword', function () {
+    return Inertia::render('recoveryPassword');
+});
+
 Route::get('/email/verify', function () {
     return inertia('Auth/VerifyEmail'); 
 })->middleware('auth')->name('verification.notice');

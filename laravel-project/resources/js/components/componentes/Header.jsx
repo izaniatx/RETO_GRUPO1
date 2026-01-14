@@ -29,11 +29,11 @@ export default function Header() {
         {/* NAV ENLACES */}
 
         <ul className="navbar-nav ms-auto">
-            <li className="nav-item"><Link className="nav-link" href="/inicio">Inicio</Link></li>
-            <li className="nav-item"><Link className="nav-link" href="/catalogo">Catálogo</Link></li>
-            <li className="nav-item"><Link className="nav-link" href="/vende-tu-coche">Vende Tu Coche</Link></li>
-            <li className="nav-item"><Link className="nav-link" href="/contacto">Contacto</Link></li>
-            <li className="nav-item"><Link className="nav-link" href="/donde-encontrarnos">Dónde Encontrarnos</Link></li>
+            <li className="nav-item "><Link className="nav-link btn-pers" href="/inicio">Inicio</Link></li>
+            <li className="nav-item "><Link className="nav-link btn-pers" href="/catalogo">Catálogo</Link></li>
+            <li className="nav-item "><Link className="nav-link btn-pers" href="/vende-tu-coche">Vende Tu Coche</Link></li>
+            <li className="nav-item "><Link className="nav-link btn-pers" href="/contacto">Contacto</Link></li>
+            <li className="nav-item "><Link className="nav-link btn-pers" href="/donde-encontrarnos">Dónde Encontrarnos</Link></li>
         </ul>
         
         
@@ -50,7 +50,7 @@ export default function Header() {
         ) : (
           <>
             <CustomButton 
-              className="btn btn-primary ms-3 btn-login"
+              className="btn btn-primary btn-pers ms-3 btn-login"
               data-bs-toggle="modal" 
               data-bs-target="#loginModal"
             >

@@ -96,6 +96,13 @@ const LoginModal = () => {
                     />
                   </div>
 
+                  <p className="text-center text-muted mt-4">
+                    ¿Has olvidado tu contraseña?{" "}
+                    <a href="/recoveryPassword" className="text-decoration-none" onClick={(e) => manejarNavegacion(e, '/recoveryPassword')}>
+                      Recuperala
+                    </a>
+                  </p>
+
                   <div className="d-grid">
                     <button type="submit" className="btn btn-dark btn-lg" disabled={processing}>
                       {processing ? 'Cargando...' : 'Iniciar Sesion'}

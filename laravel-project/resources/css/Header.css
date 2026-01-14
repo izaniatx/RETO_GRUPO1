@@ -36,4 +36,25 @@
 
 .btn-login {
     width: 150px !important; 
+    background-color: #bd3a3f;
+    border-color: #bd3a3f;
+}
+
+.btn-login:hover {
+    background-color: rgb(255, 255, 255);
+    color: #bd3a3f !important;
+    border-color: #bd3a3f;
+    transition: 0.3s;
+}
+
+.btn-login:active {
+    background-color: #962d31 !important;
+    color: rgb(255, 255, 255) !important;
+    border-color: #962d31 !important;
+}
+
+.btn-pers:hover {
+    transform: translateY(-3px); /* Se eleva un poquito */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más profunda para dar profundidad */
+    filter: brightness(1.1); /* Brilla ligeramente */
 }
