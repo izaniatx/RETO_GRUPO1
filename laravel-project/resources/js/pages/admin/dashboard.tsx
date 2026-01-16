@@ -27,9 +27,9 @@ const Dashboard = () => {
                         <Link href="/admin/usuarios" className="nav-link nav-usuarios text-white-50 px-3 py-2">
                             <i className="bi bi-people me-2"></i> Usuarios
                         </Link>
-                        <Link href="/admin/mensajes" className="nav-link nav-mensajes text-white-50 px-3 py-2">
+                        {/*<Link href="/admin/mensajes" className="nav-link nav-mensajes text-white-50 px-3 py-2">
                             <i className="bi bi-chat-dots me-2"></i> Mensajes
-                        </Link>
+                        </Link>*/}
                     </nav>
                 </aside>
 

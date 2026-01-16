@@ -36,6 +36,9 @@ Route::get('/admin/dashboard', function () {
 Route::get('/admin/usuarios', function () {
     return Inertia::render('admin/usuarios');
 });
+Route::get('/admin/mensajes', function () {
+    return Inertia::render('admin/mensajes');
+});
 
 Route::get('/recoveryPassword', function () {
     return Inertia::render('recoveryPassword');
