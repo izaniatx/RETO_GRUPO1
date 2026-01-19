@@ -32,7 +32,7 @@ return new class extends Migration
                         ->onDelete('cascade');
 
 
-
+            $table->boolean('isDeleted')->default(false);
 
             $table->timestamps();
         });
