@@ -6,6 +6,7 @@ use Laravel\Fortify\Features;
 use App\Http\Controllers\RegistroController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UsuariosController;
 
 /*Route::get('/', function () {
     return Inertia::render('welcome', [
@@ -33,9 +34,10 @@ Route::get('/admin/dashboard', function () {
     return Inertia::render('admin/dashboard');
 });
 
-Route::get('/admin/usuarios', function () {
-    return Inertia::render('admin/usuarios');
-});
+Route::get('/admin/usuarios', [UsuariosController::class, 'getUsuarios']);
+
+Route::post('/admin/usuarios/delete', [UsuariosController::class, 'deleteUsuario']);
+
 Route::get('/admin/mensajes', function () {
     return Inertia::render('admin/mensajes');
 });

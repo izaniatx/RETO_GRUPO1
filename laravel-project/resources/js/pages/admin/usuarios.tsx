@@ -2,14 +2,59 @@ import React, { useState } from 'react';
 import MainLayout from "../../layouts/MainLayout"; 
 import { Link } from '@inertiajs/react';
 import '../../../css/usuarios.css';
+import { router, usePage } from '@inertiajs/react';
 
 const Usuarios = () => {
-    // Datos de prueba para la lista de usuarios/alumnos
-    const [users, setUsers] = useState([
-        { id: 1, nombre: 'Juan Pérez', email: 'juan@example.com', rol: 'Admin', fecha: '12/01/2024' },
-        { id: 2, nombre: 'María García', email: 'maria@aro.com', rol: 'Cliente', fecha: '10/01/2024' },
-        { id: 3, nombre: 'Carlos López', email: 'carlos@test.com', rol: 'Cliente', fecha: '05/01/2024' },
-    ]);
+
+    interface Rol{
+        id: number;
+        rol: string;
+    }
+
+    interface User {
+        id: number;
+        usuario?: string;
+        nombre?: string;
+        name?: string;
+        email: string;
+        telefono?: string;
+        rol_id?: number;
+        rol?:Rol;
+        isDeleted?: boolean;
+        created_at: string;
+    }
+
+    const { users: usersProps, total, totalMes } = usePage<{ 
+    users: User[]; 
+    total: number; 
+    totalMes: number 
+    }>().props;
+
+    const [users, setUsers] = useState<User[]>(usersProps);
+
+const handleSuspender = (id: number) => {
+    if (!confirm('¿Seguro que quieres suspender este usuario?')) return;
+
+    router.post(
+        '/admin/usuarios/delete', // tu ruta
+        { id },                   // datos enviados
+        {
+            preserveScroll: true, // opcional
+            onSuccess: (page) => {
+                alert('Usuario suspendido correctamente');
+                // Actualizar la tabla localmente con los datos que devuelve el backend
+                // Por ejemplo:
+                setUsers(users.map(u => u.id === id ? { ...u, isDeleted: true } : u));
+            },
+            onError: (errors) => {
+                console.error(errors);
+                alert('Error al suspender el usuario');
+            },
+        }
+    );
+};
+
+   
 
     return (
         <MainLayout>
@@ -47,13 +92,13 @@ const Usuarios = () => {
                             <div className="col-md-6">
                                 <div className="card border-0 shadow-sm text-center p-3">
                                     <span className="text-muted small">Total Registrados</span>
-                                    <h2 className="fw-bold m-0">152</h2>
+                                    <h2 className="fw-bold m-0">{total}</h2>
                                 </div>
                             </div>
                             <div className="col-md-6">
                                 <div className="card border-0 shadow-sm text-center p-3 border-start border-primary border-4">
                                     <span className="text-muted small">Nuevos este mes</span>
-                                    <h2 className="fw-bold m-0 text-primary">12</h2>
+                                    <h2 className="fw-bold m-0 text-primary">{totalMes}</h2>
                                 </div>
                             </div>
                         </div>
@@ -64,27 +109,45 @@ const Usuarios = () => {
                                 <table className="table table-hover align-middle mb-0">
                                     <thead className="table-dark">
                                         <tr>
+                                            <th>Usuario</th>
                                             <th className="ps-4">Nombre</th>
                                             <th>Email</th>
+                                            <th>Teléfono</th>
                                             <th>Rol</th>
                                             <th>F. Registro</th>
+                                            <th>Eliminado</th>
                                             <th className="text-end pe-4">Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {users.map((user) => (
                                             <tr key={user.id}>
+                                                <td>{user.usuario}</td>
                                                 <td className="ps-4 fw-bold">{user.nombre}</td>
                                                 <td className="text-muted">{user.email}</td>
+                                                <td>{user.telefono}</td>
                                                 <td>
-                                                    <span className={`badge rounded-pill ${user.rol === 'Admin' ? 'bg-primary' : 'bg-secondary'}`}>
-                                                        {user.rol}
+                                                    <span className={`badge rounded-pill ${user.rol?.rol=== 'Administrador' ? 'bg-primary' : 'bg-secondary'}`}>
+                                                        {user.rol?.rol}
                                                     </span>
                                                 </td>
-                                                <td className="text-muted small">{user.fecha}</td>
+                                                <td className="text-muted small">{user.created_at}</td>
+                                                <td>
+                                                    <span
+                                                        className={`badge rounded-pill ${user.isDeleted ? 'bg-danger' : 'bg-success'}`}
+                                                    >
+                                                        {user.isDeleted ? 'Sí' : 'No'}
+                                                    </span>
+                                                    </td>
                                                 <td className="text-end pe-4">
                                                     <button className="btn btn-sm btn-light border me-2">Editar</button>
-                                                    <button className="btn btn-sm btn-outline-danger">Suspender</button>
+                                                    <button
+                                                            className="btn btn-sm btn-outline-danger"
+                                                            onClick={() => handleSuspender(user.id)}
+                                                        >
+                                                            Suspender
+                                                        </button>
+
                                                 </td>
                                             </tr>
                                         ))}
