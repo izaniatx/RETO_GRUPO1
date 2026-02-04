@@ -2,7 +2,7 @@
     border-radius: 50px;      
     width: 90%;        
     margin: 20px auto;
-    background-color: rgb(255, 255, 255); 
+    background-color: rgb(228, 227, 227); 
 }
 
 .custom-header .navbar-nav .nav-link {
@@ -11,7 +11,9 @@
 }
 
 .custom-header img {
-    border-radius: 50%;      
+    border-radius: 40%;
+    width: 75px;
+    height: 50px;      
 }
 
 .nav-link {
