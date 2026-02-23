@@ -12,8 +12,6 @@ class EstadisticasController extends Controller
 {
     public function graficoVentas() {
         $anioActual = now()->year;
-    
-        
         $ventasSemanales = Vehiculo::whereNotNull('fecha_venta')
             ->whereYear('fecha_venta', $anioActual)
             ->select(

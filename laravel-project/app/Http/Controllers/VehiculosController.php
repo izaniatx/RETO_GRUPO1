@@ -150,7 +150,6 @@ class VehiculosController extends Controller
 
     public function getVehiculo($id)
     {
-        
         $vehiculo = Vehiculo::with(['marca', 'modelo', 'carroceria', 'equipamientos'])
             ->findOrFail($id); 
     

@@ -24,7 +24,7 @@ const ModalEquipamiento = ({
     e.preventDefault();
 
     if (equipamientoEditar) {
-      // Ruta actualizada para coincidir con: Route::put('/equipamientos/{id}', ...)
+     
       put(`/inventario/equipamientos/${equipamientoEditar.id}`, data, {
         onSuccess: () => {
           setShowModal(false);
@@ -32,7 +32,7 @@ const ModalEquipamiento = ({
         },
       });
     } else {
-      // Ruta actualizada para coincidir con: Route::post('/equipamientos/create', ...)
+     
       post("/inventario/equipamientos/create", data, {
         onSuccess: () => {
           setShowModal(false);

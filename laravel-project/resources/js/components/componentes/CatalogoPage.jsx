@@ -7,7 +7,7 @@ import { usePage } from '@inertiajs/react';
 const CatalogoPage = () => {
   const { vehiculos = [], marcas = [], carrocerias = [] } = usePage().props;
 
-  // 1️⃣ LÓGICA DE FAVORITOS (LocalStorage)
+
   const [favoritos, setFavoritos] = useState([]);
 
   useEffect(() => {
@@ -26,17 +26,17 @@ const CatalogoPage = () => {
     localStorage.setItem('mis_favoritos', JSON.stringify(nuevosFavs));
   };
 
-  // 2️⃣ ESTADOS DE FILTROS
+
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState({
     searchQuery: '',
     marcas: [],
     precioMax: 100000,
     carroceriaId: 'todos',
-    soloFavoritos: false, // 👈 Filtro por favoritos
+    soloFavoritos: false, 
   });
 
-  // Debounce del buscador
+ 
   useEffect(() => {
     const handler = setTimeout(() => {
       setFilters(prev => ({ ...prev, searchQuery: searchTerm }));
@@ -44,7 +44,7 @@ const CatalogoPage = () => {
     return () => clearTimeout(handler);
   }, [searchTerm]);
 
-  // 3️⃣ FILTRADO REAL
+ 
   const filteredVehiculos = vehiculos.filter((coche) => {
     const modelo = coche.modelo?.modelo?.toLowerCase() || '';
     const search = filters.searchQuery.toLowerCase();
@@ -57,7 +57,7 @@ const CatalogoPage = () => {
   
     if (filters.carroceriaId !== 'todos' && Number(filters.carroceriaId) !== coche.carroceria_id) return false;
 
-    // Aplicación del filtro de favoritos
+   
     if (filters.soloFavoritos && !favoritos.includes(coche.id)) return false;
   
     return true;

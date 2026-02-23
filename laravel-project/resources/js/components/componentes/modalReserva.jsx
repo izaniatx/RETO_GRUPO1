@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'; // 👈 Faltaba importar useEffect
-import { useForm, usePage } from '@inertiajs/react'; // 👈 Faltaba importar usePage
+import React, { useEffect } from 'react'; 
+import { useForm, usePage } from '@inertiajs/react'; 
 import '../../../css/modalReserva.css';
 
 const ModalReserva = ({ isOpen, onClose, vehiculo }) => {
-    // Extraemos la información del usuario desde las props compartidas de Inertia
+   
     const { auth } = usePage().props;
     const usuarioLogueado = auth?.user;
 
@@ -17,12 +17,12 @@ const ModalReserva = ({ isOpen, onClose, vehiculo }) => {
         mensaje: '',
     });
 
-    // Actualizamos el formulario si el estado de autenticación cambia mientras la modal está abierta
+    
     useEffect(() => {
         if (isOpen && usuarioLogueado) {
             setData(prev => ({
                 ...prev,
-                // Solo actualizamos si el campo está vacío para no sobreescribir si el usuario borra algo
+                
                 nombre: prev.nombre === '' ? `${usuarioLogueado.nombre} ${usuarioLogueado.apellido || ''}`.trim() : prev.nombre,
                 email: prev.email === '' ? (usuarioLogueado.email || '') : prev.email,
                 telefono: prev.telefono === '' ? (usuarioLogueado.telefono || '') : prev.telefono,
